@@ -61,10 +61,8 @@ public class Compare implements Comparator {
     public List<String> setList(String nameOfFile) throws FileNotFoundException {
         File file = new File(nameOfFile);
         Scanner scanner = new Scanner(file);
-        String word = scanner.nextLine();
         while (scanner.hasNextLine()) {
-            this.nameOrLastname.add(word);
-            word = scanner.nextLine();
+            this.nameOrLastname.add(scanner.nextLine());
         }
         scanner.close();
         return this.nameOrLastname;
